@@ -7,8 +7,6 @@ Timeline is a full-stack Twitter clone application built with Next.js, Tailwind 
 
 [![Live Demo](https://img.shields.io/badge/Live-Demo-brightgreen)](https://amannn-portfolio.vercel.app/)
 
-![TimeLine](https://github.com/user-attachments/assets/8872c301-ad4d-4ba9-a8db-f936b12aea54)
-
 
 ## Features
 
