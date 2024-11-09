@@ -1,36 +1,49 @@
+import React from "react";
 import type { Metadata } from "next";
+import { Inter } from "next/font/google";
+import { ClerkProvider } from "@clerk/nextjs";
+import { dark } from "@clerk/themes";
+
 import "../globals.css";
-import {
-  ClerkProvider,
-} from "@clerk/nextjs";
-import TopBar from "@/components/shared/TopBar";
-import BottomBar from "@/components/shared/BottomBar";
-import LeftSideBar from "@/components/shared/LeftSideBar";
-import RightSideBar from "@/components/shared/RightSideBar";
+import Topbar from "@/components/shared/TopBar";
+import LeftSidebar from "@/components/shared/LeftSideBar";
+import Bottombar from "@/components/shared/BottomBar";
+import RightSidebar from "@/components/shared/RightSideBar";
+//import left,right,top,bottom bars
+
+
+const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "TimeLine",
-  description: "Root home page of TimeLine",
+  title: "Threads",
+  description: "A Next.js 13 Meta Threads application",
 };
 
 export default function RootLayout({
   children,
-}: Readonly<{
+}: {
   children: React.ReactNode;
-}>) {
+}) {
   return (
-    <ClerkProvider>
-      <html lang="en">
-        <body className={`antialiased`}>
-          <TopBar/>
-          <main className="flex">
-            <LeftSideBar/>
-            <section className="main-container w-full max-w-4xl m-auto">
-              {children}
+    <ClerkProvider
+      appearance={{
+        baseTheme: dark,
+      }}
+    >
+      <html lang='en'>
+        <body className={inter.className}>
+          <Topbar />
+
+          <main className='flex flex-row'>
+            <LeftSidebar />
+            <section className='main-container'>
+              <div className='w-full max-w-4xl'>{children}</div>
             </section>
-            <RightSideBar/>
+            {/* @ts-ignore */}
+            <RightSidebar />
           </main>
-          <BottomBar/>
+
+          <Bottombar />
         </body>
       </html>
     </ClerkProvider>
