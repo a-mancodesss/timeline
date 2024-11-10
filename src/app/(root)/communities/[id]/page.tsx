@@ -9,8 +9,9 @@ import ProfileHeader from "@/components/shared/ProfileHeader";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 
 import { fetchCommunityDetails } from "@/lib/actions/community.actions";
-
-async function Page({ params }: { params: { id: string } }) {
+type paramType = Promise<{ id: string }>;
+async function Page(props:{params: paramType}) {
+  const params =await props.params;
   const user = await currentUser();
   if (!user) return null;
 
