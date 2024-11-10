@@ -5,9 +5,10 @@
 Timeline is a full-stack Twitter clone application built with Next.js, Tailwind CSS, and NextAuth. It allows users to create, read, update, and delete posts. Users can also like and comment on posts.
 
 
-[![Live Demo](https://img.shields.io/badge/Live-Demo-brightgreen)](https://amannn-portfolio.vercel.app/)
+[![Live Demo](https://img.shields.io/badge/Live-Demo-brightgreen)](https://timeline-aman.vercel.app/)
 
-
+![alt text](image-1.png)
+![alt text](image.png)
 ## Features
 
 - Full CRUD functionality
