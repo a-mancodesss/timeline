@@ -9,18 +9,27 @@ Timeline is a full-stack Twitter clone application built with Next.js, Tailwind 
 
 ![alt text](image-1.png)
 ![alt text](image.png)
+
 ## Features
 
-- Full CRUD functionality
-- Secure user registration and login via NextAuth
-- Combined SSR & CSR in Next.js for optimized performance
-- Responsive design (mobile & desktop)
+- Authentication and authorization using Clerk
+- Full CRUD operations for threads/posts
+- Thread commenting system
+- Responsive design with Tailwind CSS
+- Form validation using Zod
+- Community creation and management
 
 ## Technologies
 
-- Next.js
-- NextAuth
+- Next.js 15
+- Clerk Authentication & Webhooks
+- MongoDB & Mongoose
 - Tailwind CSS
+- React Hook Form
+- Uploadthing
+- TypeScript
+- Zod Validation
+- Shadcn UI
 
 ## Getting Started
 
