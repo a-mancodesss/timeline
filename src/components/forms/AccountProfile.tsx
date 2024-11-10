@@ -19,8 +19,7 @@ import Image from "next/image";
 import { ChangeEvent, useState } from "react";
 import { Textarea } from "../ui/textarea";
 import { isBase64Image } from "@/lib/utils";
-import { useRouter } from "next/router";
-import { usePathname } from "next/navigation";
+import {  usePathname, useRouter } from "next/navigation";
 import { useUploadThing } from "@/lib/uploadthing";
 import { updateUser } from "@/lib/actions/user.actions";
 
@@ -38,7 +37,7 @@ interface AccountProfileProps {
 
 
 const AccountProfile = ({ user, btnTitle }: AccountProfileProps) => {
-  // const router = useRouter();
+  const router = useRouter();
   const pathname = usePathname();
   const { startUpload } = useUploadThing("media")
 
@@ -90,6 +89,7 @@ const AccountProfile = ({ user, btnTitle }: AccountProfileProps) => {
       image: values.profile_photo,
     }
     )
+    router.push(`/profile/${user.id}`);
   }
     return (
         <Form {...form}>

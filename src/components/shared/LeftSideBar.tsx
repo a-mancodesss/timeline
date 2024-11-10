@@ -2,13 +2,12 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { usePathname, useRouter } from "next/navigation";
+import { usePathname } from "next/navigation";
 import { SignOutButton, SignedIn, useAuth } from "@clerk/nextjs";
 
 import { sidebarLinks } from "@/lib/constants";
 
 const LeftSidebar = () => {
-  const router = useRouter();
   const pathname = usePathname();
 
   const { userId } = useAuth();
@@ -25,6 +24,7 @@ const LeftSidebar = () => {
 
           return (
             <Link
+            suppressHydrationWarning={true}
               href={link.route}
               key={link.label}
               className={`leftsidebar_link ${isActive && "bg-primary-500 "}`}
