@@ -1,4 +1,4 @@
-# TimeLine � 
+# TimeLine 🔥
 
 ## Your Next-Gen Thread Space! 🚀
 Hey there! Timeline is where your thoughts come alive - think Threads, but cooler! Built with Next.js 15 and some awesome tech, it's your go-to spot for dropping hot takes, finding your tribe, and jumping into epic convos. No boring stuff, just pure social
