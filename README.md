@@ -1,6 +1,6 @@
 # TimeLine 📝
 
-## FullStack Twitter Clone Application
+## FullStack X,threads Clone Application
 
 Timeline is a full-stack Twitter clone application built with Next.js, Tailwind CSS, and NextAuth. It allows users to create, read, update, and delete posts. Users can also like and comment on posts.
 
