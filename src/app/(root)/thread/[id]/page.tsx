@@ -9,7 +9,10 @@ import { fetchThreadById } from "@/lib/actions/thread.actions";
 
 export const revalidate = 0;
 
-async function page({ params }: { params: { id: string } }) {
+type ParamType= Promise<{ id: string }>
+
+async function page(props:{params: ParamType}) {
+  const params = await props.params;
   if (!params.id) return null;
 
   const user = await currentUser();
