@@ -11,7 +11,7 @@ Hey there! Timeline is where your thoughts come alive - think Threads, but coole
 
 ## Features
 
-- Authentication and authorization using Clerk
+- Authentication and webhook using Clerk
 - Full CRUD operations for threads/posts
 - Thread commenting system
 - Responsive design with Tailwind CSS
